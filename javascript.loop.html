@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <h1>Loop</h1>
+        <ol>
+        <script>
+            // syntax
+            // if(boolean){
+                // run
+            // }
+
+            // while(boolean){
+                // run
+            // }
+            var i = 0;
+            while(i < 9){
+                document.write('<li>hi' + (i+1) + '</li>');
+                i = i + 1;
+            }
+        </script>
+        </ol>
+
+        <h1>Array</h1>
+        <script>
+            var member = ['egoing','leezche','graphittie'];
+            document.write(member[0]);
+            document.write(member.length);
+            member.push('duru');
+            member.push('taeho');
+        </script>
+
+        <h1>Loop + Array</h1>
+        <ol>
+        <script>
+            var i = 0;
+            while(i < member.length){
+                document.write('<li>' + member[i] + '</li>');
+                i = i + 1;
+            }
+        </script>
+        </ol>
+
+
+    </body>
+</html>

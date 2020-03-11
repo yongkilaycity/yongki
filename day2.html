@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html>
+ <head>
+  <title>WEB</title>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+  <script>
+    function login(){
+      var password = '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c';
+      var inputPassword = sha256(prompt('password?'));
+      if(password === inputPassword){
+        alert('주인님 어서오세요.');
+        var utterance = new SpeechSynthesisUtterance('주인님 어서오세요');
+        window.speechSynthesis.speak(utterance);
+      }else{
+        alert('뉘신지요?');
+        var utterance = new SpeechSynthesisUtterance('뉘신지요?');
+        window.speechSynthesis.speak(utterance);
+        document.querySelector('body').className = 'hinge';
+      }
+    }
+  </script>
+ </head>
+
+ <body>
+    <input type="button" value="login" onclick="
+        login();
+    ">
+
+  <h1>Welcome to yongki's World!!</h1><br>
+  <h2>여러분을 web개발의 세계로 초대합니다.</h2>
+  
+  <a href="index.html"><h1>WEB</h1></a>
+  <script>
+    var bodyTag = document.querySelector('body');
+  </script>
+  <input type="button" value="night" onclick="
+    bodyTag.style.backgroundColor='black';
+    bodyTag.style.color='white'
+  ">
+  <input type="button" value="day" onclick="
+    bodyTag.style.backgroundColor='white';
+    bodyTag.style.color='black'
+">
+  <input type="button" value="night" onclick="
+    var as = document.querySelectorAll('a');
+    if(this.value === 'night') {
+        bodyTag.style.backgroundColor='black';
+        bodyTag.style.color='white';
+        this.value = 'day';
+
+        var i = 0;
+        while(i < as.length){
+          as[i].style.color = 'white';
+          i = i + 1;
+        }
+    }else{
+        bodyTag.style.backgroundColor='white';
+        bodyTag.style.color='black';
+        this.value = 'night';
+
+        var i = 0;
+        while(i < as.length){
+          as[i].style.color = 'black';
+          i = i + 1;
+        }
+    }
+  ">
+  <ol>
+      <li><a href="1.html">html</a></li>
+      <li><a href="2.html">css</a></li>
+      <li><a href="3.html">javascript</a></li>
+  </ol>
+  
+
+  <a href="http://w3c.org">www</a> is <u>world wide <strong>web</strong></u>.
+  <p>협찬 : <a href="http://www.naver.com">NAVER</a></p>
+
+  <p> </p>
+
+  <a href="">
+  <img src="korea.jpg" width="700" height="500" title="서울">
+  <p><strong>서울 풍경</strong></p>
+  </a>
+
+  <iframe width="700" height="300" src="https://www.youtube.com/embed/BxqUW9fZYh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+  </body>
+</html>

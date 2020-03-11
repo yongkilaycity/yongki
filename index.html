@@ -1,0 +1,56 @@
+﻿<!doctype html>
+
+<html>
+ <head>
+  <title>WEB</title>
+  <meta charset="utf-8">
+ </head>
+
+ <body>
+  <h1>Welcome to yongki's World!!</h1><br>
+  <h2>여러분을 web개발의 세계로 초대합니다.</h2>
+  <script>
+    var as = document.querySelectorAll('a');
+    var i = 0;
+    while(i < as.length){
+      as[i].style.color = 'white';
+      i = i + 1;
+    }
+  </script>
+  
+  <a href="index.html"><h1>WEB</h1></a>
+  <script>
+    var bodyTag = document.querySelector('body');
+  </script>
+  <input type="button" value="night" onclick="
+    bodyTag.style.backgroundColor='black';
+    bodyTag.style.color='white'
+  ">
+  <input type="button" value="day" onclick="
+    bodyTag.style.backgroundColor='white';
+    bodyTag.style.color='black'
+">
+
+  <ol>
+      <li><a href="1.html">html</a></li>
+      <li><a href="2.html">css</a></li>
+      <li><a href="3.html">javascript</a></li>
+  </ol>
+  
+
+  <a href="http://w3c.org">www</a> is <u>world wide <strong>web</strong></u>.
+  <p>협찬 : <a href="http://www.naver.com">NAVER</a></p>
+
+  <p> </p>
+
+  <a href="">
+  <img src="korea.jpg" width="700" height="500" title="서울">
+  <p><strong>서울 풍경</strong></p>
+  </a>
+
+  <iframe width="700" height="300" src="https://www.youtube.com/embed/BxqUW9fZYh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+  </body>
+</html>
