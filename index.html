@@ -4,51 +4,100 @@
  <head>
   <title>WEB</title>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+  <script>
+    function login(){
+      var password = '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c';
+      var inputPassword = sha256(prompt('password?'));
+      if(password === inputPassword){
+        alert('주인님 어서오세요.');
+        var utterance = new SpeechSynthesisUtterance('주인님 어서오세요');
+        window.speechSynthesis.speak(utterance);
+      }else{
+        alert('뉘신지요?');
+        var utterance = new SpeechSynthesisUtterance('뉘신지요?');
+        window.speechSynthesis.speak(utterance);
+        document.querySelector('body').className = 'hinge';
+      }
+    }
+    function randomGeneratorForArray(){
+      return Math.floor(Math.random() * colors.length);
+    }  
+  </script>
  </head>
 
- <body>
-  <h1>Welcome to yongki's World!!</h1><br>
-  <h2>여러분을 web개발의 세계로 초대합니다.</h2>
-  <script>
-    var as = document.querySelectorAll('a');
-    var i = 0;
-    while(i < as.length){
-      as[i].style.color = 'white';
-      i = i + 1;
+ <body onclick="
+        var colors=['red','green','blue','powder','tomato','gray','pink','gold'];
+        this.style.backgroundColor=colors[randomGeneratorForArray()];
+        this.style.color=colors[randomGeneratorForArray()];
+    ">
+  <input type="button" value="login" onclick="
+  login();
+">
+  <style>
+    *{
+      font-family: 'Indie Flower', cursive;
     }
-  </script>
+    h1{
+                border:red 1px solid;
+                padding-top:1px;
+                margin:1px;
+                display:inline;
+    }
+  </style>
+  <h1>Welcome to yongki's World!!</h1><br>
+  <h2>여러분을 사이버포뮬러의 세계로 초대합니다.</h2>
   
-  <a href="index.html"><h1>WEB</h1></a>
+  
+  <a href="index.html"><h1>처음으로</h1></a>
   <script>
     var bodyTag = document.querySelector('body');
   </script>
+  <h3 style.color='red'>배경화면 바꾸기</h3>
   <input type="button" value="night" onclick="
-    bodyTag.style.backgroundColor='black';
-    bodyTag.style.color='white'
-  ">
-  <input type="button" value="day" onclick="
-    bodyTag.style.backgroundColor='white';
-    bodyTag.style.color='black'
-">
+    var as = document.querySelectorAll('a');
+    if(this.value === 'night') {
+        bodyTag.style.backgroundColor='black';
+        bodyTag.style.color='white';
+        this.value = 'day';
 
+        var i = 0;
+        while(i < as.length){
+          as[i].style.color = 'white';
+          i = i + 1;
+        }
+    }else{
+        bodyTag.style.backgroundColor='white';
+        bodyTag.style.color='black';
+        this.value = 'night';
+
+        var i = 0;
+        while(i < as.length){
+          as[i].style.color = 'black';
+          i = i + 1;
+        }
+    }
+  ">
   <ol>
-      <li><a href="1.html">html</a></li>
-      <li><a href="2.html">css</a></li>
-      <li><a href="3.html">javascript</a></li>
+      <li><a href="1.html">더블원(11)</a></li>
+      <li><a href="2.html">제로(ZERO)</a></li>
+      <li><a href="3.html">사가(SAGA)</a></li>
+      <li><a href="4.html">신(SIN)</a></li>
   </ol>
   
 
-  <a href="http://w3c.org">www</a> is <u>world wide <strong>web</strong></u>.
-  <p>협찬 : <a href="http://www.naver.com">NAVER</a></p>
-
-  <p> </p>
 
   <a href="">
-  <img src="korea.jpg" width="700" height="500" title="서울">
-  <p><strong>서울 풍경</strong></p>
+  <img src="https://lh3.googleusercontent.com/proxy/hT7KKuUoWjT4QzeFlXtKbVt7zhPm5ZcLokSw_YUKPnKQaA7ZKVLD6w4ifDDwttXHIy7zGZI0HIQUu6VJHA" width="400" height="300" title="아스라다">
+  <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/e35/71177349_155573885533247_3375971144848296013_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_ohc=ECzOkenLpCIAX_nsCrK&oh=373e2ceb6a0b33d69081d3fe416273d7&oe=5E8A89D3" width="400" height="300" title="아스라다">
+  
+  <p></p>
+  <img src="https://images-na.ssl-images-amazon.com/images/I/61CMNdviN%2BL.jpg" width="400" height="300" title="아스라다">
+  
   </a>
 
-  <iframe width="700" height="300" src="https://www.youtube.com/embed/BxqUW9fZYh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
 
 
 

@@ -19,6 +19,21 @@
             }
             minus(3,2); // 1
             minus(5,3); // 2
+
+            function login(){
+                var password = '1111';
+                var inputPassword = prompt('password?');
+                if(password === inputPassword){
+                alert('주인님 어서오세요.');
+                var utterance = new SpeechSynthesisUtterance('주인님 어서오세요');
+                window.speechSynthesis.speak(utterance);
+                }else{
+                alert('뉘신지요?');
+                var utterance = new SpeechSynthesisUtterance('뉘신지요?');
+                window.speechSynthesis.speak(utterance);
+                document.querySelector('body').className = 'hinge';
+                }
+            }
         </script>
     </body>
 </html>
